@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        gallient: ['var(--font-gallient)', 'serif'],
+        gotu:['var(--font-gotu)','serif']
       },
     },
   },
