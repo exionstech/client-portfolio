@@ -16,12 +16,18 @@ const gotuFont = localFont({
   src: './fonts/Gotu-Regular.ttf',
   variable: '--font-gotu',
   weight: '400', 
-});
+},
+);
+ const SourceSerifFont = localFont({
+  src: './fonts/SourceSerif4-VariableFont_opsz,wght.ttf',
+  variable: '--font-sourceserif',
+  weight: '100 700', 
+},);
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <div className={`${gallientFont.variable} ${gotuFont.variable}`}>
+      <div className={`${gallientFont.variable} ${gotuFont.variable} ${SourceSerifFont.variable}`}>
         <NavBar />
         <Component {...pageProps} />
         <Footer/>

@@ -1,7 +1,15 @@
 import React from 'react';
-import { IoIosArrowRoundUp,GoArrowUp  } from "react-icons/io";
+import { IoIosArrowRoundUp } from "react-icons/io";
 
 function Footer() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",  
+    });
+  };
+
   return (
     <>
       <hr className='mt-1 bg-black h-[2px]' /> 
@@ -11,7 +19,12 @@ function Footer() {
           <p className='font-gotu text-sm text-center w-full'>
             Copyright 2024 By Exions Tech
           </p>
-        <button className='text-sm flex gap-1 border-none font-gotu whitespace-nowrap justify-center items-center'><IoIosArrowRoundUp className='text-2xl'/> Back on Top</button>
+          <button
+            onClick={scrollToTop}  
+            className='text-sm flex gap-1 border-none font-gotu whitespace-nowrap justify-center items-center'
+          >
+            <IoIosArrowRoundUp className='text-2xl' /> Back on Top
+          </button>
         </div>
       </div>
     </>

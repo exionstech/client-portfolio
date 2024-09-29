@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       fontFamily: {
         gallient: ['var(--font-gallient)', 'serif'],
-        gotu:['var(--font-gotu)','serif']
+        gotu:['var(--font-gotu)','serif'],
+        SourceSerif:['var(--font-sourceserif)','serif']
       },
     },
   },
