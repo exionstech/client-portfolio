@@ -6,11 +6,15 @@ function AboutUs() {
   return (
     <div className='pt-16'>
       {/* Title Section */}
-      <h1 className='font-gallient text-5xl md:text-8xl text-center text-[#1E1E1E]'>MY LITTLE</h1>
-      <div className='flex flex-col md:flex-row gap-6 justify-center items-center md:items-start pt-3 md:pl-24'>
-        <h3 className='text-4xl md:text-6xl font-gallient text-[#1E1E1E] text-center'>BIT ABOUT</h3>
-        <Image src='/Group 121.png' width={50} height={50} />
-      </div>
+      <h1 className="font-gallient text-6xl md:text-7xl lg:text-8xl text-center text-[#1E1E1E]">
+          MY LITTLE
+        </h1>
+        <div className="flex gap-6 justify-center items-start pl-4 md:pl-12 lg:pl-24">
+          <h3 className="text-center text-4xl md:text-5xl lg:text-6xl font-gallient text-[#1E1E1E]">
+            BIT ABOUT
+          </h3>
+          <Image src="/Group 121.png" width={40} height={40} className="md:w-[50px] md:h-[50px]" />
+        </div>
 
       {/* About Section */}
       <div className='flex flex-col md:flex-row justify-center items-center gap-10 pt-8'>
@@ -36,10 +40,14 @@ function AboutUs() {
 
       {/* Featured Services Section */}
       <div className='pt-20 md:pt-40'>
-        <h1 className='font-gallient text-5xl md:text-8xl text-center text-[#1E1E1E]'>FEATURED</h1>
-        <div className='flex flex-col md:flex-row gap-6 justify-center items-center md:items-start pt-3 md:pl-24'>
-          <h3 className='text-4xl md:text-6xl font-gallient text-center text-[#1E1E1E]'>SERVICES</h3>
-          <Image src='/Group 121.png' width={50} height={50} />
+      <h1 className="font-gallient text-6xl md:text-7xl lg:text-8xl text-center text-[#1E1E1E]">
+          FEATURED 
+        </h1>
+        <div className="flex gap-6 justify-center items-start pl-4 md:pl-12 lg:pl-24">
+          <h3 className="text-center text-4xl md:text-5xl lg:text-6xl font-gallient text-[#1E1E1E]">
+          SERVICES
+          </h3>
+          <Image src="/Group 121.png" width={40} height={40} className="md:w-[50px] md:h-[50px]" />
         </div>
       </div>
 
