@@ -2,6 +2,7 @@
 import NavBar from "@/Components/NavBar";
 import localFont from 'next/font/local';
 import "@/styles/globals.css";
+import Footer from "@/Components/Footer";
 
 // Define the Gallient font
 const gallientFont = localFont({
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }) {
       <div className={`${gallientFont.variable} ${gotuFont.variable}`}>
         <NavBar />
         <Component {...pageProps} />
+        <Footer/>
       </div>
     </>
   );
