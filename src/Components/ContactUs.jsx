@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function ContactUs() {
@@ -8,14 +9,9 @@ export default function ContactUs() {
           <div>GET INTO</div>
           <div className="text-4xl md:text-5xl lg:text-6xl ">
             TOUCH
-            <img
-              className="inline ml-4"
-              src="Group 121.png"
-              width={50}
-              height={50}
-            />
-          </div>
+          <Image src="/Group 121.png" width={40} height={40} className="md:w-[50px] md:h-[50px]" />
         </div>
+      </div>
 
         <div>
           <form
@@ -41,11 +37,12 @@ export default function ContactUs() {
                 cols={60}
                
                 required
-            ></textarea>
+              ></textarea>
             </div>
-            <button
-            className="bg-[#363636] text-[#FFFF] px-12 py-2"
-             type="submit">SEND</button>
+
+            <button className="bg-[#363636] text-white px-12 py-2" type="submit">
+              SEND
+            </button>
           </form>
         </div>
       </div>

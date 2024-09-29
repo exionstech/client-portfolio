@@ -1,3 +1,4 @@
+import ContactUs from "@/Components/ContactUs";
 import Image from "next/image";
 
 export default function Home() {
@@ -95,6 +96,9 @@ export default function Home() {
       </div>
     </div>
   </div>
+</div>
+<div className="p-5">
+            <ContactUs/>
 </div>
     </>
   );
