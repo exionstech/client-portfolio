@@ -1,49 +1,54 @@
+import Image from "next/image";
 import React from "react";
 
 export default function ContactUs() {
   return (
     <>
-      <div className="p-4 w-[100%] mt-28 mb-14 flex flex-col justify-center items-center ">
-        <div className="font-gallient text-8xl text-right">
-          <div>GET INTO</div>
-          <div className="text-6xl ">
+      <div id="contact" className="p-4 w-full mt-28 mb-14 flex flex-col justify-center items-center">
+      <div id="projects" className="pt-16">
+        <h1 className="font-gallient text-6xl md:text-7xl lg:text-8xl text-center text-[#1E1E1E]">
+          GET INTO
+        </h1>
+        <div className="flex gap-6 justify-center items-start pt-3 pl-4 md:pl-12">
+          <h3 className="text-center text-4xl md:text-5xl lg:text-6xl font-gallient text-[#1E1E1E]">
             TOUCH
-            <img
-              className="inline ml-4"
-              src="Group 121.png"
-              width={50}
-              height={50}
-            />
-          </div>
+          </h3>
+          <Image src="/Group 121.png" width={40} height={40} className="md:w-[50px] md:h-[50px]" />
         </div>
+      </div>
 
-        <div>
-          <form
-            className="py-5 flex flex-col justify-center items-center gap-12"
-            action=""
-          >
-            <div className="flex gap-24">
-              <div>
-                <h1>Name?*</h1>
-                <input className="bg-transparent border-b-[1px] border-black" type="text"  required />
+        <div className="w-full flex justify-center">
+          <form className="py-5 flex flex-col items-center gap-12 w-full max-w-4xl" action="">
+            <div className="flex flex-col sm:flex-row justify-between gap-6 w-full px-4">
+              <div className="flex flex-col w-full sm:w-1/2">
+                <h1 className="mb-2">Name?*</h1>
+                <input
+                  className="bg-transparent border-b-[1px] border-black w-full"
+                  type="text"
+                  required
+                />
               </div>
-              <div>
-                <h1>Email?*</h1>
-                <input type="email" className="bg-transparent border-b-[1px] border-black"  required />
+              <div className="flex flex-col w-full sm:w-1/2">
+                <h1 className="mb-2">Email?*</h1>
+                <input
+                  className="bg-transparent border-b-[1px] border-black w-full"
+                  type="email"
+                  required
+                />
               </div>
             </div>
 
-            <div> 
-                <h1>Message*</h1>
-            <textarea
-                className="bg-transparent border-b-[1px] border-black h-40 resize-none"
-                rows={100} cols={60}
+            <div className="w-full px-4">
+              <h1 className="mb-2">Message*</h1>
+              <textarea
+                className="bg-transparent border-b-[1px] border-black w-full h-40 resize-none"
                 required
-            ></textarea>
+              ></textarea>
             </div>
-            <button
-            className="bg-[#363636] text-[#FFFF] px-12 py-2"
-             type="submit">SEND</button>
+
+            <button className="bg-[#363636] text-white px-12 py-2" type="submit">
+              SEND
+            </button>
           </form>
         </div>
       </div>
