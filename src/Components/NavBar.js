@@ -2,18 +2,37 @@ import React from 'react';
 import { MdArrowRight } from "react-icons/md";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Link as ScrollLink, scroller } from 'react-scroll';  
 
 function NavBar() {
   const router = useRouter(); 
 
-
   const isActiveRoute = (path) => router.pathname === path;
+
+  
+  const handleScrollToSection = (section) => {
+    if (router.pathname !== '/') {
+      
+      router.push('/').then(() => {
+        scroller.scrollTo(section, {
+          smooth: true,
+          duration: 500,
+        });
+      });
+    } else {
+      
+      scroller.scrollTo(section, {
+        smooth: true,
+        duration: 500,
+      });
+    }
+  };
 
   return (
     <div className='flex justify-between pt-2 pl-4 pr-4'>
       <h1 className='font-gallient font-thin text-base'>ASHNA MONGA</h1>
       <div className='flex flex-col font-gallient'> 
-        
+      
         {/* Home */}
         <div className='flex items-center gap-1'> 
           <MdArrowRight className={`text-2xl ${isActiveRoute('/') ? 'text-black' : 'text-white'}`} />
@@ -28,14 +47,24 @@ function NavBar() {
 
         {/* Projects */}
         <div className='flex items-center gap-1'> 
-          <MdArrowRight className={`text-2xl ${isActiveRoute('/#projects') ? 'text-black' : 'text-white'}`} />
-          <Link href='/#projects' className='text-left'>PROJECTS</Link>
+          <MdArrowRight className={`text-2xl ${router.asPath === '/#projects' ? 'text-black' : 'text-white'}`} />
+          <div
+            className='cursor-pointer text-left'
+            onClick={() => handleScrollToSection("projects")}
+          >
+            PROJECTS
+          </div>
         </div>
 
         {/* Contact */}
         <div className='flex items-center gap-1'> 
-          <MdArrowRight className={`text-2xl ${isActiveRoute('/#contact') ? 'text-black' : 'text-white'}`} />
-          <Link href='/#contact' className='text-left'>CONTACT</Link>
+          <MdArrowRight className={`text-2xl ${router.asPath === '/#contact' ? 'text-black' : 'text-white'}`} />
+          <div
+            className='cursor-pointer text-left'
+            onClick={() => handleScrollToSection("contact")}
+          >
+            CONTACT
+          </div>
         </div>
 
       </div>
