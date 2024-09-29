@@ -2,17 +2,17 @@ import React from 'react';
 import { MdArrowRight } from "react-icons/md";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Link as ScrollLink, scroller } from 'react-scroll';  // Import scroller from react-scroll
+import { Link as ScrollLink, scroller } from 'react-scroll';  
 
 function NavBar() {
   const router = useRouter(); 
 
   const isActiveRoute = (path) => router.pathname === path;
 
-  // Function to handle scroll navigation, even when on a different page
+  
   const handleScrollToSection = (section) => {
     if (router.pathname !== '/') {
-      // Navigate to home and then scroll to the section after the page loads
+      
       router.push('/').then(() => {
         scroller.scrollTo(section, {
           smooth: true,
@@ -20,7 +20,7 @@ function NavBar() {
         });
       });
     } else {
-      // If already on the home page, scroll directly
+      
       scroller.scrollTo(section, {
         smooth: true,
         duration: 500,
