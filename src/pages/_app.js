@@ -31,7 +31,6 @@ export default function App({ Component, pageProps }) {
       <div className={`${gallientFont.variable} ${gotuFont.variable} ${SourceSerifFont.variable}`}>
         <NavBar />
         <Component {...pageProps} />
-        <ContactUs/>
         <Footer/>
       </div>
     </>

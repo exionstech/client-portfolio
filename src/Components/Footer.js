@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <>
-      <hr className='mt-1 bg-black h-[2px]' /> 
+      <hr className='mt-0 bg-black h-[2px]' /> 
       <hr className='mt-1 bg-black h-[2px]' /> 
       <div className='p-10'> 
         <div className='flex justify-between items-center'> 
