@@ -63,22 +63,28 @@ export default function Home() {
         </div>
       </div>
       <div className="pt-8">
-              <div className=" flex justify-center items-center">
+              <div className=" flex justify-center items-center text-[#363636]">
                   <div>
                     <hr />
-                    <div className="flex items-center justify-between font-SourceSerif p-10">
+                    <div className="flex items-center justify-between gap-32 font-SourceSerif p-10">
+                      <div className="w-72">
                       <h2 className="text-4xl">ICING ON THE CAKE</h2>
+                      </div>
                       <p className="text-sm">Web Application</p>
                     </div>
                     <hr />
                     <div className="flex items-center justify-between font-SourceSerif  p-10">
-                      <h2 className="text-4xl">Night OWL</h2>
-                      <p className="text-sm">Mobile Application</p>
+                      <div className="w-72">
+                      <h2 className="text-4xl text-left">NIGHT OWL</h2>
+                      </div>
+                      <p className="text-sm text-left">Mobile Application</p>
                     </div>
                     <hr /> 
                     <div className="flex items-center justify-between font-SourceSerif  p-10">
-                      <h2 className="text-4xl">Logo & Website Design</h2>
-                      <p className="text-sm">visual design</p>
+                      <div className="w-72" >
+                      <h2 className="text-4xl">LOGO & WEBSITE DESIGN</h2>
+                      </div>
+                      <p className="text-sm text-left">Visual Design</p>
                     </div>
                     
                   </div>
