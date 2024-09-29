@@ -55,40 +55,42 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='pt-16 '>
+
+      {/* Projects Section */}
+      <div id="projects" className='pt-16 '>
         <h1 className='font-gallient text-8xl text-center text-[#1E1E1E]'>SELECTED</h1>
         <div className='flex gap-6 justify-center items-start pt-3 pl-24'>
           <h3 className='text-center text-6xl font-gallient text-[#1E1E1E]'>PROJECTS</h3>
           <Image src='/Group 121.png' width={50} height={50} />
         </div>
       </div>
+
       <div className="pt-8">
-              <div className=" flex justify-center items-center text-[#363636]">
-                  <div>
-                    <hr />
-                    <div className="flex items-center justify-between gap-32 font-SourceSerif p-10">
-                      <div className="w-72">
-                      <h2 className="text-4xl">ICING ON THE CAKE</h2>
-                      </div>
-                      <p className="text-sm">Web Application</p>
-                    </div>
-                    <hr />
-                    <div className="flex items-center justify-between font-SourceSerif  p-10">
-                      <div className="w-72">
-                      <h2 className="text-4xl text-left">NIGHT OWL</h2>
-                      </div>
-                      <p className="text-sm text-left">Mobile Application</p>
-                    </div>
-                    <hr /> 
-                    <div className="flex items-center justify-between font-SourceSerif  p-10">
-                      <div className="w-72" >
-                      <h2 className="text-4xl">LOGO & WEBSITE DESIGN</h2>
-                      </div>
-                      <p className="text-sm text-left">Visual Design</p>
-                    </div>
-                    
-                  </div>
+        <div className=" flex justify-center items-center text-[#363636]">
+          <div>
+            <hr />
+            <div className="flex items-center justify-between gap-32 font-SourceSerif p-10">
+              <div className="w-72">
+                <h2 className="text-4xl">ICING ON THE CAKE</h2>
               </div>
+              <p className="text-sm">Web Application</p>
+            </div>
+            <hr />
+            <div className="flex items-center justify-between font-SourceSerif  p-10">
+              <div className="w-72">
+                <h2 className="text-4xl text-left">NIGHT OWL</h2>
+              </div>
+              <p className="text-sm text-left">Mobile Application</p>
+            </div>
+            <hr /> 
+            <div className="flex items-center justify-between font-SourceSerif  p-10">
+              <div className="w-72" >
+                <h2 className="text-4xl">LOGO & WEBSITE DESIGN</h2>
+              </div>
+              <p className="text-sm text-left">Visual Design</p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
