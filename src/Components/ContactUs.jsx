@@ -4,60 +4,61 @@ import React from "react";
 export default function ContactUs() {
   return (
     <>
-      <div id="contact" className=" sm:p-4 w-[100%] mt-28 mb-14 flex flex-col justify-center items-center ">
-        {/* <div className="font-gallient text-right text-6xl md:text-7xl lg:text-8xl">
-          {/* <div>GET INTO</div>
-          <div className="text-4xl flex text-right md:text-5xl lg:text-6xl ">
-            TOUCH
-          {/* <Image src="/Group 121.png" width={40} height={40} 
-          className="md:w-[50px] md:h-[50px]" /> */}
-          {/* <img src="Group 121.png" width={40} height={40} /> 
-        </div> */}
-         <h1 className="font-gallient text-6xl md:text-7xl lg:text-8xl text-center text-[#1E1E1E]">
+      <div id="contact" className="px-4 sm:p-4 w-full mt-28 mb-14 flex flex-col justify-center items-center">
+      <h1 className="font-gallient text-6xl sm:text-[100px] md:text-[140px] lg:text-[200px] text-center text-[#1E1E1E]">
           GET INTO
         </h1>
-        <div className="flex gap-6 justify-center items-start pl-12 md:pl-16 lg:pl-32">
-          <h3 className="text-center text-4xl md:text-5xl lg:text-6xl font-gallient text-[#1E1E1E]">
+        <div className="flex gap-2 sm:gap-4 justify-center items-start pl-32 md:pl-96 lg:pl-96">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-gallient text-[#1E1E1E]">
             TOUCH
           </h3>
-          <Image src="/Group 121.png" width={40} height={40} className=" md:w-[50px] md:h-[50px]" />
+          <Image
+            src="/Group 121.png"
+            width={35}
+            height={35}
+            className="sm:w-[45px] sm:h-[45px] md:w-[55px] md:h-[55px]"
+          />
         </div>
-
       </div>
 
-        <div className="w-full flex justify-center">
-          <form
-            className=" sm:px-0 py-5 flex flex-col justify-center items-center gap-12"
-            action=""
-          >
-            <div className="flex flex-col gap-10 w-full items-center sm:gap-24 sm:flex-row">
-              <div className="w-[80%]">
-                <h1>Name?*</h1>
-                <input className="bg-transparent border-b-[1px] border-black w-full" type="text"  required />
-              </div>
-              <div className="w-[80%]">
-                <h1>Email?*</h1>
-                <input type="email" className="bg-transparent border-b-[1px] border-black w-full"  required />
-              </div>
-            </div>
-
-            <div className="mx-12 sm:mx-0"> 
-                <h1>Message*</h1>
-            <textarea
-                className="bg-transparent w-full border-b-[1px] border-black  resize-none"
-                rows={6} 
-                cols={60}
-               
+      <div className="w-full flex justify-center">
+        <form
+          className="w-full max-w-[1200px] px-4 sm:px-6 lg:px-8 py-5 flex flex-col justify-center items-center gap-8 sm:gap-12"
+          action=""
+        >
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-12 w-full items-center justify-between">
+            <div className="w-full sm:w-[45%]">
+              <h1 className="mb-2">Name?*</h1>
+              <input
+                className="bg-transparent border-b-[1px] border-black w-full"
+                type="text"
                 required
-              ></textarea>
+              />
             </div>
+            <div className="w-full sm:w-[45%]">
+              <h1 className="mb-2">Email?*</h1>
+              <input
+                type="email"
+                className="bg-transparent border-b-[1px] border-black w-full"
+                required
+              />
+            </div>
+          </div>
 
-            <button className="bg-[#363636] text-white px-12 py-2" type="submit">
-              SEND
-            </button>
-          </form>
-        </div>
-      
+          <div className="w-full">
+            <h1 className="mb-2">Message*</h1>
+            <textarea
+              className="bg-transparent w-full border-b-[1px] border-black resize-none"
+              rows={6}
+              required
+            ></textarea>
+          </div>
+
+          <button className="bg-[#363636] text-white px-8 py-2" type="submit">
+            SEND
+          </button>
+        </form>
+      </div>
     </>
   );
 }
