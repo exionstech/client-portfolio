@@ -1,7 +1,22 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
 import { GoArrowUpRight } from "react-icons/go";
 
+import React, { useEffect, useState } from "react";
+import { InfiniteMovingCards } from "@/Components/ui/infinite-moving-cards";
+
+const services = [
+  {
+    
+    
+  },  {
+    
+  },  {
+   
+  },  {
+    
+  },
+]
 function AboutUs() {
   return (
     <div className='pt-16'>
@@ -61,11 +76,20 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className='flex flex-col md:flex-row gap-4 justify-center items-center pt-3 pb-6'>
+      {/* <div className='flex flex-col md:flex-row gap-4 justify-center items-center pt-3 pb-6'>
         <div className='w-60 h-60 md:w-72 md:h-72 bg-slate-800'></div>
         <div className='w-60 h-60 md:w-72 md:h-72 bg-slate-800'></div>
         <div className='w-60 h-60 md:w-72 md:h-72 bg-slate-800'></div>
+      </div> */}
+      <div className='my-16 w-[80%] m-auto'>
+
+      <InfiniteMovingCards
+        items={services}
+        direction="right"
+        speed="normal"
+      />
       </div>
+
 
       {/* Follow Section */}
       <div className='flex flex-col md:flex-row gap-12 md:gap-24 justify-center items-center pt-24 pb-16'>
