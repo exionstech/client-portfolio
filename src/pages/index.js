@@ -49,7 +49,7 @@ export default function Home() {
 
 
       {/* Intro Section */}
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-20 bg-white py-4">
+      <div className="my-28 flex flex-col-reverse lg:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-20 bg-white py-4">
         <div className="w-full lg:w-[600px] mr-4 text-center lg:text-left">
           <p className="text-lg md:text-2xl lg:text-4xl font-gotu">
             With over three years of experience in design, I transform
