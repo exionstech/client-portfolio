@@ -37,7 +37,7 @@ function AboutUs() {
         </div>
 
       {/* About Section */}
-      <div className='flex flex-col md:flex-row justify-center items-center gap-10 pt-8'>
+    <div className='my-16 flex flex-col md:flex-row justify-center items-center gap-10 pt-8'>
   <Image
     src='/About.png'
     width={300}
