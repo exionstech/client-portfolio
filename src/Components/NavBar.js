@@ -26,7 +26,7 @@ function NavBar() {
   };
 
   return (
-    <div className=' right-0 flex justify-between backdrop-blur-sm z-50 p-4'>
+    <div className=' right-0 flex justify-between items-center backdrop-blur-sm z-50 p-4'>
       <h1 className='font-gallient font-thin text-base sm:text-lg md:text-xl lg:text-2xl'>ASHNA MONGA</h1>
       <div className='flex flex-col font-gallient'> 
         

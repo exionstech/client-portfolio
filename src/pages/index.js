@@ -1,6 +1,7 @@
 import ContactUs from "@/Components/ContactUs";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -26,7 +27,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="text-center">
+      {/* <div className="text-center">
         <h1 className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center items-start text-[#363636] m-0">
           CREA
           <span>
@@ -45,6 +46,41 @@ export default function Home() {
         <h1 className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center text-[#363636] m-0">
           DESIGNER
         </h1>
+      </div> */}
+      <div className="text-center">
+        <motion.h1
+          className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center items-start text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
+          initial={{ scale: 0.5, opacity: 0 }} // Initial state
+          animate={{ scale: 1, opacity: 1 }}  // Animate to this state
+          transition={{ duration: 0.5 }}       // Transition duration
+        >
+          CREA
+          <span>
+            <Image
+              src="/Hero.png"
+              height={80}
+              width={80}
+              className="md:h-[120px] md:w-[120px] lg:h-[180px] lg:w-[180px] sm:h-[100px] sm:w-[100px] min-w-[80px] min-h-[80px]"
+            />
+          </span>
+          TIVE
+        </motion.h1>
+        <motion.h1
+          className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }} // Adding a slight delay
+        >
+          UI/UX
+        </motion.h1>
+        <motion.h1
+          className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }} // Adding a slight delay
+        >
+          DESIGNER
+        </motion.h1>
       </div>
 
 
@@ -89,10 +125,25 @@ export default function Home() {
 
       {/* Projects Section */}
       <div id="projects" className="pt-12">
-        <h1 className="font-gallient text-6xl sm:text-[100px] md:text-[140px] lg:text-[200px] text-center text-[#1E1E1E]">
+        {/* Main Title */}
+        <motion.h1
+          className="font-gallient text-6xl sm:text-[100px] md:text-[140px] lg:text-[200px] text-center text-[#1E1E1E]"
+          initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
+          whileInView={{ opacity: 1, x: 0 }} // Move to the right when in view
+          transition={{ duration: 1 }} // Animation duration
+          viewport={{ once: true }} // Animation occurs once, not every time it's in view
+        >
           SELECTED
-        </h1>
-        <div className="flex gap-2 sm:gap-4 justify-center items-start pl-32 md:pl-96 lg:pl-96">
+        </motion.h1>
+
+        {/* Sub-title and image */}
+        <motion.div
+          className="flex gap-2 sm:gap-4 justify-center items-start pl-32 md:pl-96 lg:pl-96"
+          initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
+          whileInView={{ opacity: 1, x: 0 }} // Move to the right when in view
+          transition={{ duration: 1.2, delay: 0.3 }} // Delay the animation slightly
+          viewport={{ once: true }} // Trigger animation only once
+        >
           <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-gallient text-[#1E1E1E]">
             PROJECTS
           </h3>
@@ -101,63 +152,64 @@ export default function Home() {
             width={35}
             height={35}
             className="sm:w-[45px] sm:h-[45px] md:w-[55px] md:h-[55px]"
+            alt="Selected Projects Icon"
           />
-        </div>
+        </motion.div>
       </div>
 
-{/* Project List */}
-<div className="pt-32">
-  <div className="flex justify-center items-center text-[#363636]">
-    <div className="w-full px-4 md:px-8">
-      {projects.map((project, index) => (
-        <div key={index}>
-          <hr />
-          <div
-            className="h-96 md:h-60 lg:h-60 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 lg:gap-16 xl:gap-24 font-SourceSerif p-4 md:p-6 text-center md:text-left relative group"
-            onMouseEnter={() => setHoveredProject(index)}
-            onMouseLeave={() => setHoveredProject(null)}
-          >
-            {/* Project Title */}
-            <div className="w-full md:w-2/3 lg:w-1/2">
-              <h2 className="text-[24px] md:text-[40px] lg:text-[50px] xl:text-[60px]">{project.title}</h2>
-            </div>
-
-            {/* Container for the image and button */}
-            <div className="relative w-full md:w-[800px] lg:w-[880px] h-full md:h-[400px] lg:h-[480px] overflow-hidden">
-              {/* Overlay with smooth opacity transition */}
-              <div
-                className={`absolute inset-0 bg-slate-400 opacity-0 transition-opacity duration-600 ease-in-out ${hoveredProject === index ? "opacity-80" : ""}`}
-              ></div>
-
-              {hoveredProject === index && (
-                <>
-                  {/* Button with smooth appearance */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
-                    <button className="bg-slate-700 text-white w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full z-10 text-xl md:text-2xl lg:text-3xl">
-                      View
-                    </button>
+      {/* Project List */}
+      <div className="pt-32">
+        <div className="flex justify-center items-center text-[#363636]">
+          <div className="w-full px-4 md:px-8">
+            {projects.map((project, index) => (
+              <div key={index}>
+                <hr />
+                <div
+                  className="h-96 md:h-60 lg:h-60 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 lg:gap-16 xl:gap-24 font-SourceSerif p-4 md:p-6 text-center md:text-left relative group"
+                  onMouseEnter={() => setHoveredProject(index)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                >
+                  {/* Project Title */}
+                  <div className="w-full md:w-2/3 lg:w-1/2">
+                    <h2 className="text-[24px] md:text-[40px] lg:text-[50px] xl:text-[60px]">{project.title}</h2>
                   </div>
 
-                  {/* Image with smooth scale and border transition */}
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover border-8 md:border-8 border-slate-200 transition-transform duration-700 ease-in-out"
-                    style={{ borderWidth: '35px', transform: hoveredProject === index ? 'scale(1.05)' : 'scale(1)' }}
-                  />
-                </>
-              )}
-            </div>
+                  {/* Container for the image and button */}
+                  <div className="relative w-full md:w-[800px] lg:w-[880px] h-full md:h-[400px] lg:h-[480px] overflow-hidden">
+                    {/* Overlay with smooth opacity transition */}
+                    <div
+                      className={`absolute inset-0 bg-slate-400 opacity-0 transition-opacity duration-600 ease-in-out ${hoveredProject === index ? "opacity-80" : ""}`}
+                    ></div>
 
-            {/* Project Description */}
-            <p className="w-full md:w-1/3 lg:w-1/4 text-md md:text-lg lg:text-xl">{project.description}</p>
+                    {hoveredProject === index && (
+                      <>
+                        {/* Button with smooth appearance */}
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+                          <button className="bg-slate-700 text-white w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full z-10 text-xl md:text-2xl lg:text-3xl">
+                            View
+                          </button>
+                        </div>
+
+                        {/* Image with smooth scale and border transition */}
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="absolute inset-0 w-full h-full object-cover border-8 md:border-8 border-slate-200 transition-transform duration-700 ease-in-out"
+                          style={{ borderWidth: '35px', transform: hoveredProject === index ? 'scale(1.05)' : 'scale(1)' }}
+                        />
+                      </>
+                    )}
+                  </div>
+
+                  {/* Project Description */}
+                  <p className="w-full md:w-1/3 lg:w-1/4 text-md md:text-lg lg:text-xl">{project.description}</p>
+                </div>
+                <hr />
+              </div>
+            ))}
           </div>
-          <hr />
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
 
 
 
@@ -166,7 +218,7 @@ export default function Home() {
 
 
       {/* Contact Us Section */}
-      <div className="p-4">
+      <div className="pt-28">
         <ContactUs />
       </div>
     </>
