@@ -22,10 +22,10 @@ const services = [
 
 function AboutUs() {
   return (
-    <div className='pt-16'>
+    <div className='pt-16 overflow-x-hidden'>
       {/* Title Section */}
       <motion.h1
-        className="font-gallient text-6xl sm:text-[100px] md:text-[140px] lg:text-[200px] text-center text-[#1E1E1E]"
+        className="font-gallient text-6xl sm:text-[100px] md:text-[120px] lg:text-[180px] text-center text-[#1E1E1E]"
         initial={{ x: -100, opacity: 0 }} // Start off-screen to the left
         whileInView={{ x: 0, opacity: 1 }} // Move to original position and become visible
         transition={{ duration: 0.5 }} // Animation duration
@@ -33,7 +33,7 @@ function AboutUs() {
       >
         MY LITTLE
       </motion.h1>
-      <div className="flex gap-2 sm:gap-4 justify-center items-start pl-32 md:pl-96 lg:pl-96">
+      <div className="flex gap-2 sm:gap-4 justify-center items-start pl-32 md:pl-60 lg:pl-96">
         <motion.h3
           className="text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-gallient text-[#1E1E1E]"
           initial={{ x: -100, opacity: 0 }}
@@ -57,11 +57,11 @@ function AboutUs() {
           src='/About.png'
           width={300}
           height={700}
-          className="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[400px] xl:w-[500px]" // Responsive image size
+          className="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[300px] xl:w-[500px]" // Responsive image size
         />
         <div className="text-center md:text-left">
-          <div className='w-full md:w-96 lg:w-[700px]'>
-            <p className='font-gotu text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>
+          <div className='w-full md:w-auto lg:w-[700px]'>
+            <p className='font-gotu text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl px-5 md:px-0 md:pr-6 lg:pr-16'>
               I'm Ashna, a vibrant and passionate UX designer and researcher with an artistic flair. From Pastry Artist to UX Designer, I bring creativity, user understanding, and a passion for delightful experiences. Let's craft extraordinary digital journeys together.
             </p>
             <div className="flex justify-center md:justify-start">
@@ -74,9 +74,9 @@ function AboutUs() {
       </div>
 
       {/* Featured Services Section */}
-      <div className='pt-20 md:pt-40'>
+      <div className='pt-20 md:pt-28'>
         <motion.h1
-          className="font-gallient text-6xl sm:text-[100px] md:text-[140px] lg:text-[200px] text-center text-[#1E1E1E]"
+          className="font-gallient text-6xl sm:text-[100px] md:text-[120px] lg:text-[180px] text-center text-[#1E1E1E]"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -84,7 +84,7 @@ function AboutUs() {
         >
           FEATURED
         </motion.h1>
-        <div className="flex gap-2 sm:gap-4 justify-center items-start pl-32 md:pl-96 lg:pl-96">
+        <div className="flex gap-2 sm:gap-4 justify-center items-start pl-32 md:pl-60 lg:pl-96">
           <motion.h3
             className="text-4xl sm:text-5xl md:text-6xl lg:text-[100px] font-gallient text-[#1E1E1E]"
             initial={{ x: -100, opacity: 0 }}
@@ -112,10 +112,10 @@ function AboutUs() {
       </div>
 
       {/* Follow Section */}
-      <div className='flex flex-col md:flex-row gap-12 md:gap-24 justify-center items-center pt-24 pb-16'>
-        <div className='text-center md:text-left'>
+      <div className='flex flex-col md:flex-col lg:flex-row gap-12 md:gap-0 justify-center items-center pt-24 pb-16'>
+        <div className=' text-center md:text-center'>
           <motion.h1
-            className='font-gallient text-[80px] md:text-[200px] text-[#1E1E1E]'
+            className='font-gallient text-[80px] md:text-[120px] text-[#1E1E1E]'
             style={{ lineHeight: '1.1' }} // Custom line height
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -125,7 +125,7 @@ function AboutUs() {
             FOLLOW
           </motion.h1>
           <motion.h3
-            className='text-[60px] md:text-[140px] font-gallient text-[#1E1E1E] pl-0 md:pl-[560px]'
+            className='text-[60px] md:text-[120px] font-gallient text-[#1E1E1E] pl-0 md:pl-[240px]'
             style={{ lineHeight: '1.1' }} // Custom line height
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -135,9 +135,9 @@ function AboutUs() {
             ME
           </motion.h3>
         </div>
-        <div className='flex justify-center items-center'>
-          <h4 className='font-gotu rotate-[270deg] sm:text-lg md:text-xl lg:text-2xl mb-0 hidden md:block'>CONNECT WITH ME <span className='text-red-600'>*</span></h4>
-          <div className='flex flex-col justify-start items-center md:ml-1'>
+        <div className=' flex md:flex-col md:gap-5 lg:flex-row lg:gap-0 md:mt-9 lg:mt-0 justify-center items-center '>
+          <h4 className='font-gotu lg:rotate-[270deg] sm:text-lg md:text-xl lg:text-2xl mb-0 hidden md:block'>CONNECT WITH ME <span className='text-red-600'>*</span></h4>
+          <div className='flex flex-col justify-start items-center '>
             <ul>
               <li className='font-gotu sm:text-lg md:text-xl lg:text-2xl mb-4 cursor-pointer'>LINKEDIN</li>
               <li className='font-gotu sm:text-lg md:text-xl lg:text-2xl mb-4 cursor-pointer'>INSTAGRAM</li>
