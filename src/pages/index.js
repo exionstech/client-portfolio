@@ -46,10 +46,13 @@ export default function Home() {
         <h1 className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center text-[#363636] m-0">
           DESIGNER
         </h1>
+          text-[4rem] md:text-[90px] lg:text-[200px]
+        text-[60px] md:text-[90px] lg:text-[200px]
+        text-[60px] md:text-[90px] lg:text-[200px]
       </div> */}
-      <div className="text-center">
+      <div className="text-center px-10 md:px-0  lg:h-screen pt-20 lg:pt-0 ">
         <motion.h1
-          className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center items-start text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
+          className="font-gallient text-[4.9rem] sm:text-[6rem] md:text-[7.5rem] lg:text-[10rem] flex justify-center items-start text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
           initial={{ scale: 0.5, opacity: 0 }} // Initial state
           animate={{ scale: 1, opacity: 1 }}  // Animate to this state
           transition={{ duration: 0.5 }}       // Transition duration
@@ -66,7 +69,7 @@ export default function Home() {
           TIVE
         </motion.h1>
         <motion.h1
-          className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
+          className="font-gallient text-[4.9rem] sm:text-[6rem] md:text-[7.5rem] lg:text-[10rem] flex justify-center text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }} // Adding a slight delay
@@ -74,7 +77,7 @@ export default function Home() {
           UI/UX
         </motion.h1>
         <motion.h1
-          className="font-gallient text-[60px] md:text-[90px] lg:text-[200px] flex justify-center text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
+          className="font-gallient text-[4.9rem] sm:text-[6rem] md:text-[7.5rem] lg:text-[10rem] flex justify-center text-[#363636] m-0 leading-tight" // Add leading-tight class for reduced line height
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }} // Adding a slight delay
@@ -85,9 +88,9 @@ export default function Home() {
 
 
       {/* Intro Section */}
-      <div className="my-28 flex flex-col-reverse lg:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-20 bg-white py-4">
+      <div className="mb-12 md:mb-28 mt-12 sm:mt-16 flex flex-col-reverse lg:flex-row items-center justify-center gap-14 lg:gap-0 bg-white py-4">
         <div className="w-full lg:w-[600px] mr-4 text-center lg:text-left">
-          <p className="text-lg md:text-2xl lg:text-4xl font-gotu">
+          <p className="text-lg px-6 md:text-2xl lg:text-4xl font-gotu">
             With over three years of experience in design, I transform
             concepts into extraordinary projects through the realm of
             creativity and interactive design.
