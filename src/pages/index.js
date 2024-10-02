@@ -105,58 +105,60 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Project List */}
-      <div className="pt-32">
-        <div className="flex justify-center items-center text-[#363636]">
-          <div className="w-full px-4 md:px-8">
-            {projects.map((project, index) => (
-              <div key={index}>
-                <hr />
-                <div
-                  className="h-96 md:h-60 lg:h-60 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 lg:gap-16 xl:gap-28 font-SourceSerif p-4 md:p-6 text-center md:text-left relative group"
-                  onMouseEnter={() => setHoveredProject(index)}
-                  onMouseLeave={() => setHoveredProject(null)}
-                >
-                  {/* Project Title */}
-                  <div className="w-full md:w-2/3 lg:w-1/2">
-                    <h2 className="text-[24px] md:text-[40px] lg:text-[50px] xl:text-[60px]">{project.title}</h2>
+{/* Project List */}
+<div className="pt-32">
+  <div className="flex justify-center items-center text-[#363636]">
+    <div className="w-full px-4 md:px-8">
+      {projects.map((project, index) => (
+        <div key={index}>
+          <hr />
+          <div
+            className="h-96 md:h-60 lg:h-60 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 lg:gap-16 xl:gap-24 font-SourceSerif p-4 md:p-6 text-center md:text-left relative group"
+            onMouseEnter={() => setHoveredProject(index)}
+            onMouseLeave={() => setHoveredProject(null)}
+          >
+            {/* Project Title */}
+            <div className="w-full md:w-2/3 lg:w-1/2">
+              <h2 className="text-[24px] md:text-[40px] lg:text-[50px] xl:text-[60px]">{project.title}</h2>
+            </div>
+
+            {/* Container for the image and button */}
+            <div className="relative w-full md:w-[800px] lg:w-[880px] h-full md:h-[400px] lg:h-[480px] overflow-hidden">
+              {/* Overlay with smooth opacity transition */}
+              <div
+                className={`absolute inset-0 bg-slate-400 opacity-0 transition-opacity duration-600 ease-in-out ${hoveredProject === index ? "opacity-80" : ""}`}
+              ></div>
+
+              {hoveredProject === index && (
+                <>
+                  {/* Button with smooth appearance */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out">
+                    <button className="bg-slate-700 text-white w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full z-10 text-xl md:text-2xl lg:text-3xl">
+                      View
+                    </button>
                   </div>
 
-                  {/* Container for the image and button */}
-                  <div className="relative w-full md:w-[800px] lg:w-[880px] h-full md:h-[400px] lg:h-[480px] overflow-hidden">
-                    <div
-                      className={`absolute inset-0 bg-slate-400 opacity-0 transition-opacity duration-100 ${hoveredProject === index ? "opacity-100" : ""}`}
-                    ></div>
+                  {/* Image with smooth scale and border transition */}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover border-8 md:border-8 border-slate-200 transition-transform duration-700 ease-in-out"
+                    style={{ borderWidth: '35px', transform: hoveredProject === index ? 'scale(1.05)' : 'scale(1)' }}
+                  />
+                </>
+              )}
+            </div>
 
-                    {hoveredProject === index && (
-                      <>
-                        {/* Button */}
-                        <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-300">
-                          <button className="bg-slate-700 text-white w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full z-10 text-xl md:text-2xl lg:text-3xl">
-                            View
-                          </button>
-                        </div>
-
-                        {/* Image */}
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="absolute inset-0 w-full h-full object-cover border-8 md:border-8 border-slate-200"
-                          style={{ borderWidth: '35px' }}
-                        />
-                      </>
-                    )}
-                  </div>
-
-                  {/* Project Description */}
-                  <p className="w-full md:w-1/3 lg:w-1/4 text-md md:text-lg lg:text-xl">{project.description}</p>
-                </div>
-                <hr />
-              </div>
-            ))}
+            {/* Project Description */}
+            <p className="w-full md:w-1/3 lg:w-1/4 text-md md:text-lg lg:text-xl">{project.description}</p>
           </div>
+          <hr />
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
 
 
